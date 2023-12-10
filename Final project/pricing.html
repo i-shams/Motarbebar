@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pricing  -  MotarBebar</title>
+        <link rel="stylesheet" href="./Resources/CSS/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Get a Car</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 mt-lg-4">
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-1" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control rounded-1" placeholder="Phone Number" >
+                </div>
+                <div class="col-md-6">
+                  <input type="date" class="form-control rounded-1" placeholder="Email" >
+                </div>
+                <div class="col-md-6">
+                  <input type="time" class="form-control rounded-1" placeholder="Email" >
+                </div>
+                <div class="col-12">
+                  <select class="form-control" id="vehicleCategory">
+                    <option selected>Choose...</option>
+                    <option>Sedan</option>
+                    <option>SUV</option>
+                    <option>Truck</option>
+                    <option>Van</option>
+                </select>
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control rounded-1" rows="4" placeholder="Any specific requirements?"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <div class="col d-flex justify-content-center">
+                <a href="#" class="btn btn-dark rounded-1" data-bs-dismiss="modal">Request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="staticBackdrop-sedan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Get a Sedan</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 mt-lg-4">
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-1" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control rounded-1" placeholder="Phone Number" >
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">Start date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">End date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control rounded-1" rows="4" placeholder="Any specific requirements?"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <div class="col d-flex justify-content-center">
+                <a href="#" class="btn btn-dark rounded-1" data-bs-dismiss="modal">Request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="staticBackdrop-suv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Get an SUV</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 mt-lg-4">
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-1" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control rounded-1" placeholder="Phone Number" >
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">Start date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">End date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control rounded-1" rows="4" placeholder="Any specific requirements?"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <div class="col d-flex justify-content-center">
+                <a href="#" class="btn btn-dark rounded-1" data-bs-dismiss="modal">Request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="staticBackdrop-van" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Get a Van</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 mt-lg-4">
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-1" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control rounded-1" placeholder="Phone Number" >
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">Start date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">End date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control rounded-1" rows="4" placeholder="Any specific requirements?"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <div class="col d-flex justify-content-center">
+                <a href="#" class="btn btn-dark rounded-1" data-bs-dismiss="modal">Request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top on_scroll">
+                <div class="container-sm">
+                  <a class="navbar-brand fs-3 fw-semibold" href="./index.html">
+                    MotarBebar
+                  </a>
+                  <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                  </button>
+                  <div class="offcanvas offcanvas-end bg-white offcanvas_bg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title offcanvas_header" id="offcanvasNavbarLabel">Motar Bebar</h5>
+                      <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                          <a class="nav-link mx-lg-2 mx-xl-3 " aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mx-lg-2 mx-xl-3 " href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 mx-xl-3" href="./services.html">Services</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link mx-lg-2 mx-xl-3 active" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle mx-lg-2 mx-xl-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Category
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item d-flex justify-content-between" data-bs-toggle="modal" data-bs-target="#staticBackdrop-sedan"> <span class="align-self-center">Get Sedan</span><img src="./Resources/Images/sedan.png" height="35px" width="auto" alt=""></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between" data-bs-toggle="modal" data-bs-target="#staticBackdrop-suv"> <span class="align-self-center">Get SUV</span><img src="./Resources/Images/automoblie.png" height="35px" width="auto" alt=""></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between" data-bs-toggle="modal" data-bs-target="#staticBackdrop-van"> <span class="align-self-center">Get Van</span><img src="./Resources/Images/mini-van.png" height="35px" width="auto" alt=""></a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item hover">
+                            <a class="nav-link mx-lg-2 mx-xl-3" href="./contact.html">Contact</a>
+                        </li>
+                        <button type="button" class="btn btn-dark on_scroll_btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Get a Car</button>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <div class="topImg">
+            <div class="container-fluid topImg-main d-flex justify-content-center align-content-center">
+                <div class="row d-flex justify-content-center align-content-center flex-column align-self-center scroll-animateB">
+                    <div class="col top-text-main text-center">Pricing</div>
+                    <div class="col top-text-secondary text-center">In this section, find information about our pricing.</div>
+                </div>
+            </div>
+        </div>
+        <main>
+          <section class="container-fluid bg-dark">
+            <div class="container">
+              <nav class="" style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                <ol class="breadcrumb p-1 mb-0 headerFont2" style="font-size: 15px;">
+                  <li class="breadcrumb-item"><a href="./index.html" class=" text-white link-underline-info link-underline-opacity-0 link-underline-opacity-100-hover link-offset-2-hover link-underline-warning">Home</a></li>
+                  <li class="breadcrumb-item active text-white-50" aria-current="page">></li>
+                  <li class="breadcrumb-item active text-white-50" aria-current="page">Pricing</li>
+                </ol>
+              </nav>     
+            </div>
+        </section>
+          <div class="container headerFont2 scroll-animateB">
+            <h2 class="text-center mb-2 mt-4">Membership Program</h2>
+            <hr>
+            <h4 class="mt-4">More Than Just Renting: </h4>
+            <p>Join our exclusive membership program today and unlock a world of benefits. Our members enjoy:</p>
+            <div class="row row-cols-md-2 row-cols-1 mt-md-3 gy-md-5">
+              <div class="col mb-2">
+                <div class="row">
+                  <div class="col-1 d-flex flex-column align-items-center pt-1 ms-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="white" class="bi bi-currency-dollar bg-black p-3 rounded" viewBox="0 0 16 16">
+                      <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
+                    </svg>
+                  </div>
+                  <div class="col-10 ps-4 pe-0 pt-1">
+                    <h5 class="mb-1">Special Discounts:</h5>
+                    <p class="p-0">Save more on every rental with exclusive member-only rates.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-2">
+                <div class="row">
+                  <div class="col-1 d-flex flex-column align-items-center pt-1 ms-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="white" class="bi bi-person-check-fill bg-black p-3 rounded" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                      <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                    </svg>
+                  </div>
+                  <div class="col-10 ps-4 pe-0 pt-1">
+                    <h5 class="mb-1">Priority Service:</h5>
+                    <p class="p-0">Skip the queue with our priority booking and customer service.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-2">
+                <div class="row">
+                  <div class="col-1 d-flex flex-column align-items-center pt-1 ms-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="white" class="bi bi-tools bg-black p-3 rounded" viewBox="0 0 16 16">
+                      <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+                    </svg>
+                  </div>
+                  <div class="col-10 ps-4 pe-0 pt-1">
+                    <h5 class="mb-1">Customized Options:</h5>
+                    <p class="p-0">Tailor your rental experience with additional services and accessories.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-2">
+                <div class="row">
+                  <div class="col-1 d-flex flex-column align-items-center pt-1 ms-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="white" class="bi bi-gift-fill bg-black p-3 rounded" viewBox="0 0 16 16">
+                      <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07M9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9z"/>
+                    </svg>
+                  </div>
+                  <div class="col-10 ps-4 pe-0 pt-1">
+                    <h5 class="mb-1">Loyalty Rewards:</h5>
+                    <p class="p-0">Earn points with every rental, redeemable for free rentals, upgrades, and more.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container py-5">
+            <div class=" container scroll-animateB">
+              <h2 class="text-center mb-2 mt-4 headerFont2">Membership Plans</h2>
+              <hr>
+            </div>
+            <div class="row g-xl-3 g-2 mt-4">
+              <div class="col col-12 col-md-4 pricing-card pc1 scroll-animateB">
+                <div class="card bg-black text-bg-dark">
+                  <div class="card-header bg-transparent fs-5">Starter</div>
+                  <div class="card-body">
+                    <h3 class="card-title text-center mb-5 mt-2"><span class="starter-pricing-price">$10</span>/month</h3>
+                    <ul class="list-group-flush ps-1 ps-md-3 ps-lg-2">
+                      <li class="list-group-item mb-3">
+                        <div class="row d-flex">
+                          <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#66FF00" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                          </svg></div>
+                          <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">10% discount on all car rentals</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#66FF00" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">Priority access to vehicle upgrades, subject to availability</div>
+                          </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#66FF00" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">Exclusive early access to deals and discounts</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#66FF00" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">No additional fee for one additional driver</div>
+                          </div>
+                      </li>
+                    </ul>
+                    <div class="row row-cols-3 justify-content-center mt-5"><a href="" class="btn btn-light">Join</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-4 pricing-card pc2 scroll-animateB">
+                <div class="card bg-black text-bg-dark">
+                  <div class="card-header bg-transparent fs-5">Premium</div>
+                  <div class="card-body">
+                    <h3 class="card-title text-center mb-5 mt-2"><span class=" premium-pricing-price">$25</span>/month</h3>
+                    <ul class="list-group-flush ps-1 ps-md-3 ps-lg-2">
+                      <li class="list-group-item mb-3">
+                        <div class="row d-flex">
+                          <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                          </svg></div>
+                          <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">15% discount on all car rentals</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">Complimentary vehicle upgrades, when available</div>
+                          </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">24/7 roadside assistance for added peace of mind</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                        <div class="row d-flex">
+                          <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                          </svg></div>
+                          <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">No additional fee for up to two additional drivers</div>
+                        </div>
+                    </li>
+                    </ul>
+                    <div class="row row-cols-3 justify-content-center mt-5"><a href="" class="btn btn-light">Join</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-4 pricing-card pc3 scroll-animateB">
+                <div class="card bg-black text-bg-dark">
+                  <div class="card-header bg-transparent fs-5">Executive</div>
+                  <div class="card-body">
+                    <h3 class="card-title text-center mb-5 mt-2"><span class=" executive-pricing-price">$50</span>/month</h3>
+                    <ul class="list-group-flush ps-1 ps-md-3 ps-lg-2">
+                      <li class="list-group-item mb-3">
+                        <div class="row d-flex">
+                          <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                          </svg></div>
+                          <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">20% discount on all car rentals</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">Guaranteed complimentary vehicle upgrades</div>
+                          </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">Unlimited 24/7 roadside assistance</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                        <div class="row d-flex">
+                          <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                          </svg></div>
+                          <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">No additional fee for unlimited additional drivers</div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="row row-cols-3 justify-content-center mt-5"><a href="" class="btn btn-light">Join</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container scroll-animateB">
+            <h2 class="text-center mb-2 headerFont2">Compare Plans</h2>
+            <hr>
+            <div class="table-responsive">
+              <table class="table table-dark table-striped align-middle text-center mt-4">
+                <thead>
+                  <tr class="row-cols-4">
+                    <th scope="col" class="Tline bg-white"></th>
+                    <th scope="col" class="border-end ">Starter</th>
+                    <th scope="col" class="border-end ">Premium</th>
+                    <th scope="col" class="">Executive</th>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr>
+                    <th scope="row" class="Tline Tline2">Price</th>
+                    <td class="border-end  Tline2">$10</td>
+                    <td class="border-end  Tline2">$25</td>
+                    <td class="Tline2">$50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="Tline">Discounts on All Rentals</th>
+                    <td class="border-end ">10%</td>
+                    <td class="border-end">15%</td>
+                    <td class="">20%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="Tline">Vehicle Upgrades</th>
+                    <td class="border-end">Subject to availability</td>
+                    <td class="border-end ">Complimentary when available</td>
+                    <td class="">Guaranteed complimentary</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="Tline">Exclusive early access to deals and discounts</th>
+                    <td class="border-end">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    </td>
+                    <td class="border-end ">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    </td>
+                    <td class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="Tline">Roadside assistance</th>
+                    <td class="border-end">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                      </svg>
+                    </td>
+                    <td class="border-end ">24/7</td>
+                    <td class="">Unlimited 24/7</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="Tline">No extra fee for additional driver</th>
+                    <td class="border-end">One additional driver</td>
+                    <td class="border-end ">Up to 2 additional driver</td>
+                    <td class="">Unlimited additional driver</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="Tline">Priority customer support</th>
+                    <td class="border-end">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                      </svg>
+                    </td>
+                    <td class="border-end ">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    </td>
+                    <td class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="Tline">Expedited service at pick-up and drop-off</th>
+                    <td class="border-end">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                      </svg>
+                    </td>
+                    <td class="border-end ">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                      </svg>
+                    </td>
+                    <td class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="Tline">Exclusive access to members-only premium vehicle selections</th>
+                    <td class="border-end">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                      </svg>
+                    </td>
+                    <td class="border-end ">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                      </svg>
+                    </td>
+                    <td class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+        <footer class="bg-black">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5">
+              <div class="col-md-6 col-sm-12 p-3 text-white">
+                <h4 class="fs-2 border-bottom pb-2">Motar Bebar</h4>
+                <p>Book your next rental with Motar Bobar and enjoy a seamless travel experience. Stay connected with us on our social media pages for the latest deals and updates.</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+                </svg>  <strong>IJS</strong> - All Rights Reserved </p>
+                <div>
+                  <a href="#" class="pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="gray" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                  </svg></a>
+                  <a href="#" class="pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="gray" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    <linearGradient id="instaG">
+                      <stop class="main-stop" offset="0%" style="stop-color:#405de6" />
+                      <stop class="main-stop" offset="25%" style="stop-color:#5851db" />
+                      <stop class="main-stop" offset="50%" style="stop-color:#833ab4" />
+                      <stop class="main-stop" offset="75%" style="stop-color:#c13584" />
+                      <stop class="main-stop" offset="85%" style="stop-color:#e1306c" />
+                      <stop class="alt-stop" offset="100%" style="stop-color:#fd1d1d" />
+                  </linearGradient>                  
+                  </svg></a>
+                  <a href="#" class="pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="gray" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                  </svg></a>
+                  <a href="#" class="pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="gray" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                  </svg></a>
+                </div>
+              </div>
+              <div class="nav navbar-dark col-md-3 col-sm-12 p-3 d-inline text-white">
+                <h5 class="fs-4">Useful Links</h5>
+                <ul class="navbar-nav navbar-dark flex-column pt-2 ps-3">
+                  <li class="nav-item"><a href="./index.html" class="nav-link ">Home</a></li>
+                  <li class="nav-item"><a href="./about.html" class="nav-link ">About Us</a></li>
+                  <li class="nav-item"><a href="./services.html" class="nav-link ">Our Services</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link">Membership</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-sm-12 p-3 text-white">
+                <h5 class="fs-4">Contact Us</h5>
+                <p class="ps-3 pt-2 lh-lg">
+                  Shahre Naw
+                  <br>
+                  Near Park Mall
+                  <br>
+                  Kabul, Afghanistan
+                  <br>
+                  <strong>Email:</strong>
+                  motarbebar@gmail.com
+                  <br>
+                  <strong>Phone: </strong>
+                  +93420420420
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>

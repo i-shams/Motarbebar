@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home  -  MotarBebar</title>
+        <link rel="stylesheet" href="./Resources/CSS/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Get a Car</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 mt-lg-4">
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-1" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control rounded-1" placeholder="Phone Number" >
+                </div>
+                <div class="col-md-6">
+                  <input type="date" class="form-control rounded-1" placeholder="Email" >
+                </div>
+                <div class="col-md-6">
+                  <input type="time" class="form-control rounded-1" placeholder="Email" >
+                </div>
+                <div class="col-12">
+                  <select class="form-control" id="vehicleCategory">
+                    <option selected>Choose...</option>
+                    <option>Sedan</option>
+                    <option>SUV</option>
+                    <option>Truck</option>
+                    <option>Van</option>
+                </select>
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control rounded-1" rows="4" placeholder="Any specific requirements?"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <div class="col d-flex justify-content-center">
+                <a href="#" class="btn btn-dark rounded-1" data-bs-dismiss="modal">Request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="staticBackdrop-sedan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Get a Sedan</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 mt-lg-4">
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-1" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control rounded-1" placeholder="Phone Number" >
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">Start date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">End date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control rounded-1" rows="4" placeholder="Any specific requirements?"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <div class="col d-flex justify-content-center">
+                <a href="#" class="btn btn-dark rounded-1" data-bs-dismiss="modal">Request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="staticBackdrop-suv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Get an SUV</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 mt-lg-4">
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-1" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control rounded-1" placeholder="Phone Number" >
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">Start date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">End date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control rounded-1" rows="4" placeholder="Any specific requirements?"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <div class="col d-flex justify-content-center">
+                <a href="#" class="btn btn-dark rounded-1" data-bs-dismiss="modal">Request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="staticBackdrop-van" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Get a Van</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 mt-lg-4">
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-1" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control rounded-1" placeholder="Phone Number" >
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">Start date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-md-6">
+                  <label for="d-start" class="form-label text-bg-dark p-1 rounded-1">End date</label>
+                  <input type="date" class="form-control rounded-1" placeholder="Email" id="d-start">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control rounded-1" rows="4" placeholder="Any specific requirements?"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <div class="col d-flex justify-content-center">
+                <a href="#" class="btn btn-dark rounded-1" data-bs-dismiss="modal">Request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top on_scroll">
+                <div class="container-sm">
+                  <a class="navbar-brand fs-3 fw-semibold" href="#">
+                    MotarBebar
+                  </a>
+                  <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                  </button>
+                  <div class="offcanvas offcanvas-end bg-white offcanvas_bg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title offcanvas_header" id="offcanvasNavbarLabel">Motar Bebar</h5>
+                      <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                          <a class="nav-link mx-lg-2 mx-xl-3 active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mx-lg-2 mx-xl-3" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 mx-xl-3" href="./services.html">Services</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link mx-lg-2 mx-xl-3" href="./pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle mx-lg-2 mx-xl-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Category
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item d-flex justify-content-between" data-bs-toggle="modal" data-bs-target="#staticBackdrop-sedan"> <span class="align-self-center">Get Sedan</span><img src="./Resources/Images/sedan.png" height="35px" width="auto" alt=""></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between" data-bs-toggle="modal" data-bs-target="#staticBackdrop-suv"> <span class="align-self-center">Get SUV</span><img src="./Resources/Images/automoblie.png" height="35px" width="auto" alt=""></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between" data-bs-toggle="modal" data-bs-target="#staticBackdrop-van"> <span class="align-self-center">Get Van</span><img src="./Resources/Images/mini-van.png" height="35px" width="auto" alt=""></a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item hover">
+                            <a class="nav-link mx-lg-2 mx-xl-3" href="./contact.html">Contact</a>
+                        </li>
+                        <button type="button" class="btn btn-dark on_scroll_btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Get a Car</button>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <div class="hero p-lg-5">
+          <div  class="container pt-5 mb-md-2 mt-sm-5 scroll-animateB">
+              <div class="row d-flex">
+                  <div class="col-lg-7 my-md-5 pt-md-5 text-center text-lg-start order-2 order-lg-1">
+                      <h2 class="text-capitalize">The leading vehicle Rental company in Afghanistan</h2>
+                      <span class="fs-5 text-black-50">Welcome to Motar Bobar <span class="text-black">-</span> Where Every Journey Matters</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-car-front ps-2 pb-1" viewBox="0 0 16 16">
+                        <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276"/>
+                        <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z"/>
+                      </svg>  
+                      <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+                      <dotlottie-player src="https://lottie.host/d7c70760-f7cc-429b-887a-ed5fd9b819cf/bgASSRVS9b.json" background="transparent" speed="0.3" style="width: 100; height: 100;" loop autoplay></dotlottie-player> -->
+                  </div>
+                  <div class="col-lg-5 order-1">
+                      <div class="row row-cols-1">
+                          <img src="./Resources/Images/logo1.svg" width="480em" height="480em" alt="logo" class="px-5 px-md-0">
+                      </div>
+                  </div>
+              </div>    
+          </div>
+        </div>
+        <main>
+          <div class="container aboutUS my-5 headerFont2">
+            <div class=" container scroll-animateB">
+              <h2 class="text-center mb-2 mt-4 headerFont2">About Us</h2>
+              <hr>
+              <div class="row my-5">
+                <div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center">
+                  <h4 class="mt-4">More Than Just Renting: </h4>
+                  <p>At Motar Bobar, we're more than just a car rental company; we're your gateway to a journey of comfort, convenience, and cost-effective travel. Founded with the vision of simplifying transportation for all, we specialize in providing a diverse fleet of top-quality SUVs, Sedans, and Vans, catering to all your travel needs, whether it's a family vacation, a business trip, or a leisure outing.</p>
+                </div>
+                <div class="col-12 col-md-6 order-1 order-md-2">
+                  <img src="./Resources/Images/about1.png" alt="X">
+                </div>
+              </div>
+            </div>
+            <div class="row my-5 scroll-animateB">
+              <div class="col-12 col-md-6 order-2 d-flex flex-column justify-content-center">
+                <h4 class="mt-4">Tailored Rental Experience: </h4>
+                <p>Understanding the unique needs of each customer, we offer personalized rental solutions. Whether you need a car for a day, a week, or longer, our flexible rental plans are designed to accommodate your schedule seamlessly.</p>
+              </div>
+              <div class="col-12 col-md-6 order-1">
+                <img src="./Resources/Images/about 2.png" alt="X">
+              </div>
+            </div>
+            <div class="row my-5 scroll-animateB">
+              <div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center">
+                <h4 class="mt-4">Membership Program – Travel More, Save More:</h4>
+                <p>Join our exclusive membership program and unlock a world of benefits. Members enjoy discounted rates, priority service, and exclusive offers. Our membership program is our way of thanking you for your loyalty and trust in us.</p>
+              </div>
+              <div class="col-12 col-md-6 order-1 order-md-2">
+                <img src="./Resources/Images/about 3.png" alt="X">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class=" container scroll-animateB">
+              <h2 class="text-center mb-2 mt-4 headerFont2">Our Services</h2>
+              <hr>
+              <div class="row my-5">
+                <div class="col-12 col-md-7 order-1 d-flex align-items-center headerFont2">
+                  <div class="row-cols-1">
+                    <div class="col">
+                      <h4 class="mt-4">Exclusive Vehicle Range: </h4>
+                      <p>At MotarBebar, we don't just offer cars; we provide experiences. Our exclusive range includes:</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-5 order-2 d-flex justify-content-center align-items-center py-0">
+                  <dotlottie-player src="https://lottie.host/f5334be6-0311-4766-bf7e-8aa19646ce65/7OjsU9YmqS.json" background="transparent" speed="0.3" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row row-cols-lg-2 row-cols-1 gy-4 d-flex justify-content-center mb-3">
+              <div class="col scroll-animateB" style="transition-delay: .1s;">
+                <div class="card mb-3 services-card">
+                  <div class="row g-0">
+                    <div class="col-md-5 d-flex align-items-center">
+                      <div class="card-body headerFont2">
+                        <h4 class="card-title fs-2">Eco-Friendly Electric and Hybrids:</h4>
+                        <p class="card-text">Go green with our environmentally friendly electric and hybrid vehicles, perfect for the eco-conscious traveler.</p>
+                        <p class="card-text"><small class="text-body-secondary">Range: 200-300 Miles</small></p>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <img src="./Resources/Images/S-electric.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col scroll-animateB" style="transition-delay: .3s;">
+                <div class="card mb-3 services-card">
+                  <div class="row g-0">
+                    <div class="col-md-5 d-flex align-items-center">
+                      <div class="card-body">
+                        <h4 class="card-title fs-2">Luxury Cars: </h4>
+                        <p class="card-text">Indulge in our selection of luxury cars, ideal for making a lasting impression at business events or special occasions.</p>
+                        <p class="card-text"><small class="text-body-secondary">Range: 200-400 Miles</small></p>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <img src="./Resources/Images/S-luxury.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col scroll-animateB" style="transition-delay: .3s;">
+                <div class="card mb-3 services-card">
+                  <div class="row g-0">
+                    <div class="col-md-5 d-flex align-items-center">
+                      <div class="card-body">
+                        <h4 class="card-title fs-2">Supercars and Hypercars:</h4>
+                        <p class="card-text">Experience the thrill of speed and performance with our stunning supercars and hypercars, designed to deliver the ultimate driving experience.</p>
+                        <p class="card-text"><small class="text-body-secondary">Range: 150-250 Miles</small></p>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <img src="./Resources/Images/S-supercar.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col scroll-animateB" style="transition-delay: .5s;">
+                <div class="card mb-3 services-card">
+                  <div class="row g-0">
+                    <div class="col-md-5 d-flex align-items-center">
+                      <div class="card-body">
+                        <h4 class="card-title fs-2">All-Terrain Vehicles: </h4>
+                        <p class="card-text">Adventure awaits with our robust all-terrain vehicles, ready to take on any trail or off-road journey.</p>
+                        <p class="card-text"><small class="text-body-secondary">Range: 200-500 Miles</small></p>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <img src="./Resources/Images/S-suv.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="container py-5">
+            <div class=" container scroll-animateB">
+              <h2 class="text-center mb-2 mt-4 headerFont2">Membership Plans</h2>
+              <hr>
+            </div>
+            <div class="row g-xl-3 g-2 mt-4">
+              <div class="col col-12 col-md-4 pricing-card pc1 scroll-animateB">
+                <div class="card bg-black text-bg-dark">
+                  <div class="card-header bg-transparent fs-5">Starter</div>
+                  <div class="card-body">
+                    <h3 class="card-title text-center mb-5 mt-2"><span class="starter-pricing-price">$10</span>/month</h3>
+                    <ul class="list-group-flush ps-1 ps-md-3 ps-lg-2">
+                      <li class="list-group-item mb-3">
+                        <div class="row d-flex">
+                          <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#66FF00" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                          </svg></div>
+                          <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">10% discount on all car rentals</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#66FF00" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">Priority access to vehicle upgrades, subject to availability</div>
+                          </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#66FF00" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">Exclusive early access to deals and discounts</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#66FF00" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">No additional fee for one additional driver</div>
+                          </div>
+                      </li>
+                    </ul>
+                    <div class="row row-cols-3 justify-content-center mt-5"><a href="" class="btn btn-light">Join</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-4 pricing-card pc2 scroll-animateB">
+                <div class="card bg-black text-bg-dark">
+                  <div class="card-header bg-transparent fs-5">Premium</div>
+                  <div class="card-body">
+                    <h3 class="card-title text-center mb-5 mt-2"><span class=" premium-pricing-price">$25</span>/month</h3>
+                    <ul class="list-group-flush ps-1 ps-md-3 ps-lg-2">
+                      <li class="list-group-item mb-3">
+                        <div class="row d-flex">
+                          <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                          </svg></div>
+                          <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">15% discount on all car rentals</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">Complimentary vehicle upgrades, when available</div>
+                          </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">24/7 roadside assistance for added peace of mind</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                        <div class="row d-flex">
+                          <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                          </svg></div>
+                          <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">No additional fee for up to two additional drivers</div>
+                        </div>
+                    </li>
+                    </ul>
+                    <div class="row row-cols-3 justify-content-center mt-5"><a href="" class="btn btn-light">Join</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-4 pricing-card pc3 scroll-animateB">
+                <div class="card bg-black text-bg-dark">
+                  <div class="card-header bg-transparent fs-5">Executive</div>
+                  <div class="card-body">
+                    <h3 class="card-title text-center mb-5 mt-2"><span class=" executive-pricing-price">$50</span>/month</h3>
+                    <ul class="list-group-flush ps-1 ps-md-3 ps-lg-2">
+                      <li class="list-group-item mb-3">
+                        <div class="row d-flex">
+                          <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                          </svg></div>
+                          <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">20% discount on all car rentals</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">Guaranteed complimentary vehicle upgrades</div>
+                          </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                          <div class="row d-flex">
+                            <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg></div>
+                            <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">Unlimited 24/7 roadside assistance</div>
+                        </div>
+                      </li>
+                      <li class="list-group-item  mb-3">
+                        <div class="row d-flex">
+                          <div class="col col-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                          </svg></div>
+                          <div class="col col-10 ps-1 ps-md-3 ps-lg-3 ps-xl-2 pe-lg-5">No additional fee for unlimited additional drivers</div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="row row-cols-3 justify-content-center mt-5"><a href="" class="btn btn-light">Join</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testi">
+            <div class=" container scroll-animateB">
+              <h2 class="text-center mb-2 mt-4 headerFont2">Customers Testimonials</h2>
+              <hr>
+            </div>
+            <div id="testimonials" class="carousel slide carousel-fade scroll-animateB" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active c-item" data-bs-interval="5000">
+                  <div class="row c-item-main1">
+                    <div class="col col-9 c-item-text d-flex flex-column justify-content-center align-items-center">
+                      <div class="row ">
+                        <div class="col-1"></div>
+                        <div class="col col-md-8 ">
+                          <p class="text-start testi-cmnt">"I had a fantastic experience with MotarBebar! The booking process was a breeze, and the staff was incredibly friendly and helpful. The car was clean, reliable, and made my trip all the more enjoyable. Highly recommend!"</p>
+                        </div>
+                        <div class="col-lg-5 col-2 col-md-3"></div>
+                      </div>
+                      <div class="row pt-3 pt-lg-5">
+                        <div class="col-3"></div>
+                        <div class="col col-8 ">
+                          <p class="text-start testi-name mb-2">Alex Jones</p>
+                          <div class="row">
+                            <div class="col-md-4 col-2 "><span class="align-middle testi-name">Rating:</span></div>
+                            <div class="col-md-8 col-10"><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill " viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill " viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill " viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill " viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill " viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg></div>
+                          </div>
+                        </div>
+                        <div class="col"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item c-item" data-bs-interval="5000">
+                  <div class="row c-item-main2">
+                    <div class="col col-9 c-item-text d-flex flex-column justify-content-center align-items-center">
+                      <div class="row ">
+                        <div class="col-1"></div>
+                        <div class="col col-md-8 ">
+                          <p class="text-start testi-cmnt">"Absolutely loved my experience with MotarBebar! Quick and easy reservation process, friendly staff, and the car was in excellent condition. Will definitely be choosing them for my future travels."</p>
+                        </div>
+                        <div class="col-lg-5 col-2 col-md-3"></div>
+                      </div>
+                      <div class="row pt-3 pt-lg-5">
+                        <div class="col-3"></div>
+                        <div class="col col-8 ">
+                          <p class="text-start testi-name mb-2">Maria Ahmadi</p>
+                          <div class="row">
+                            <div class="col-md-4 col-2"><span class="align-middle testi-name">Rating:</span></div>
+                            <div class="col-md-8 col-10"><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg></div>
+                          </div>
+                        </div>
+                        <div class="col"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item c-item" data-bs-interval="5000">
+                  <div class="row c-item-main3">
+                    <div class="col col-9 c-item-text d-flex flex-column justify-content-center align-items-center">
+                      <div class="row ">
+                        <div class="col-1"></div>
+                        <div class="col col-md-8 ">
+                          <p class="text-start testi-cmnt">
+                            <!-- "Khodayar MotarBebar, yak lancloser kar dashtom gereftem bisyar khob kash dasht. Khob tait ba sobot company ast ame. ba kole qawmet recommend mekonom MotarBebar ra"  -->
+                            "I had a fantastic experience with MotarBebar! The booking process was a breeze, and the staff was incredibly friendly and helpful. The car was clean, reliable, and made my trip all the more enjoyable. Highly recommend!"
+                          </p>
+                        </div>
+                        <div class="col-lg-5 col-2 col-md-3"></div>
+                      </div>
+                      <div class="row pt-3 pt-lg-5">
+                        <div class="col-3"></div>
+                        <div class="col col-8 ">
+                          <p class="text-start testi-name mb-2">Najib Borot</p>
+                          <div class="row">
+                            <div class="col-md-4 col-2"><span class="align-middle testi-name">Rating:</span></div>
+                            <div class="col-md-8 col-10"><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" fill="Gold" class="bi bi-star-fill" viewBox="0 0 16 16">
+                              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg></div>
+                          </div>
+                        </div>
+                        <div class="col"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq">
+            <div class=" row d-flex me-0 justify-content-center">
+              <div class="col-lg-9 col-md-10  pe-0">
+                <div class=" m-4 scroll-animateB">
+                  <h2 class="text-center mb-2 mt-4 headerFont2">Frequently Asked Questions</h2>
+                  <hr>
+                </div>
+                <div class="accordion accordion-flush" id="FAQs">
+                  <div class="accordion-item acc-item scroll-animateB">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                        <div class="row">
+                          <div class="col-1 d-flex align-items-center justify-content-center p-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                          </svg></div>
+                          <div class="col-11 ps-2"> What types of vehicles are available for rent?</div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#FAQs">
+                      <div class="accordion-body acc-body">
+                        We offer a wide range of vehicles to suit various needs, including sedans for city travel, SUVs for rugged terrain, and vans for group trips or larger cargo space.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item acc-item scroll-animateB">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                        <div class="row">
+                          <div class="col-1 d-flex align-items-center justify-content-center p-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                          </svg></div>
+                          <div class="col-11 ps-2"> How do I book a rental vehicle?</div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#FAQs">
+                      <div class="accordion-body acc-body">
+                        Booking is simple! Visit our website, choose your vehicle type, select your rental dates, and follow the on-screen instructions to complete your reservation.  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item acc-item scroll-animateB">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                        <div class="row">
+                          <div class="col-1 d-flex align-items-center justify-content-center p-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                          </svg></div>
+                          <div class="col-11 ps-2"> What are the requirements to rent a vehicle?</div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#FAQs">
+                      <div class="accordion-body acc-body">
+                        Renters must be at least 21 years old, possess a valid driver's license, and have a credit card in their name. Additional documentation may be required for international renters.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item acc-item scroll-animateB">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                        <div class="row">
+                          <div class="col-1 d-flex align-items-center justify-content-center p-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                          </svg></div>
+                          <div class="col-11 ps-2"> Are there any mileage limits on rentals?</div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#FAQs">
+                      <div class="accordion-body acc-body">
+                        Standard rentals come with a daily mileage limit, but unlimited mileage options are available for an additional fee. Please check the specific terms for your rental.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item acc-item scroll-animateB">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                        <div class="row">
+                          <div class="col-1 d-flex align-items-center justify-content-center p-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                          </svg></div>
+                          <div class="col-11 ps-2"> Can I rent a car for someone else?</div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#FAQs">
+                      <div class="accordion-body acc-body">Yes, you can book a car for someone else, but the person driving must meet our rental requirements and be present to sign the rental agreement at the time of vehicle pickup.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item acc-item scroll-animateB">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                        <div class="row">
+                          <div class="col-1 d-flex align-items-center justify-content-center p-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                          </svg></div>
+                          <div class="col-11 ps-2"> What is your cancellation policy?</div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#FAQs">
+                      <div class="accordion-body acc-body">You can cancel your booking up to 24 hours before your scheduled pickup time without any charges. Cancellations made later may incur a fee.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item acc-item scroll-animateB">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                        <div class="row">
+                          <div class="col-1 d-flex align-items-center justify-content-center p-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                          </svg></div>
+                          <div class="col-11 ps-2"> Do you offer insurance coverage for rentals?</div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#FAQs">
+                      <div class="accordion-body acc-body">Yes, we offer various insurance options for added peace of mind. These include collision damage waiver, personal accident insurance, and more.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item acc-item scroll-animateB">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                        <div class="row">
+                          <div class="col-1 d-flex align-items-center justify-content-center p-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                          </svg></div>
+                          <div class="col-11 ps-2"> Are additional drivers allowed?</div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#FAQs">
+                      <div class="accordion-body acc-body">Additional drivers are welcome but must be registered at the time of rental and meet all rental requirements.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item acc-item scroll-animateB">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                        <div class="row">
+                          <div class="col-1 d-flex align-items-center justify-content-center p-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                          </svg></div>
+                          <div class="col-11 ps-2"> What should I do in case of an accident or breakdown?</div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#FAQs">
+                      <div class="accordion-body acc-body">In the event of an accident or breakdown, contact our 24/7 roadside assistance immediately. Emergency contact details are provided with your rental documents.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item acc-item scroll-animateB">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button acc-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+                        <div class="row">
+                          <div class="col-1 d-flex align-items-center justify-content-center p-0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                          </svg></div>
+                          <div class="col-11 ps-2"> Are pets allowed in rental vehicles?</div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#FAQs">
+                      <div class="accordion-body acc-body">Pets are allowed in our vehicles, but we request that they be kept in carriers for the duration of the trip to maintain vehicle cleanliness.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="bg-black">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5">
+              <div class="col-md-6 col-sm-12 p-3 text-white">
+                <h4 class="fs-2 border-bottom pb-2">Motar Bebar</h4>
+                <p>Book your next rental with Motar Bobar and enjoy a seamless travel experience. Stay connected with us on our social media pages for the latest deals and updates.</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+                </svg>  <strong>IJS</strong> - All Rights Reserved </p>
+                <div>
+                  <a href="#" class="pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="gray" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                  </svg></a>
+                  <a href="#" class="pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="gray" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    <linearGradient id="instaG">
+                      <stop class="main-stop" offset="0%" style="stop-color:#405de6" />
+                      <stop class="main-stop" offset="25%" style="stop-color:#5851db" />
+                      <stop class="main-stop" offset="50%" style="stop-color:#833ab4" />
+                      <stop class="main-stop" offset="75%" style="stop-color:#c13584" />
+                      <stop class="main-stop" offset="85%" style="stop-color:#e1306c" />
+                      <stop class="alt-stop" offset="100%" style="stop-color:#fd1d1d" />
+                  </linearGradient>                  
+                  </svg></a>
+                  <a href="#" class="pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="gray" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                  </svg></a>
+                  <a href="#" class="pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="gray" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                  </svg></a>
+                </div>
+              </div>
+              <div class="nav navbar-dark col-md-3 col-sm-12 p-3 d-inline text-white">
+                <h5 class="fs-4">Useful Links</h5>
+                <ul class="navbar-nav navbar-dark flex-column pt-2 ps-3">
+                  <li class="nav-item"><a href="#" class="nav-link ">Home</a></li>
+                  <li class="nav-item"><a href="./about.html" class="nav-link ">About Us</a></li>
+                  <li class="nav-item"><a href="./services.html" class="nav-link ">Our Services</a></li>
+                  <li class="nav-item"><a href="./pricing.html" class="nav-link">Membership</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-sm-12 p-3 text-white">
+                <h5 class="fs-4">Contact Us</h5>
+                <p class="ps-3 pt-2 lh-lg">
+                  Shahre Naw
+                  <br>
+                  Near Park Mall
+                  <br>
+                  Kabul, Afghanistan
+                  <br>
+                  <strong>Email:</strong>
+                  motarbebar@gmail.com
+                  <br>
+                  <strong>Phone: </strong>
+                  +93420420420
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    </body>
+</html>
