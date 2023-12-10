@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+header {
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (min-width: 991px) {
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .hero {
+        height: 90vh;
+    }
+}
+
+.dropdown-item:active {
+    background-color: black !important;
+    color: white !important;
+}
+
+.navbar-brand:hover {
+    text-shadow: 2px 2px 20px blue;
+    transition: all 0.5s;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+}
+
+
+
+.navbar {
+    transition: all 0.3s;
+}
+
+.scrolled {
+    background-color: rgb(0, 0, 0, 0.85);
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.15);
+}
+
+@media (min-width: 375px) {
+    .hero h2 {
+        font-size: 3em;
+    }
+    
+}
+
+@media (min-width: 550px) {
+    .hero h2 {
+        font-size: 4.3em;
+    }
+    
+}
+
+
+
+.hero h2 {
+    font-family: 'Rubik', 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
+.topImg {
+    background-image: url(../Images/top-img.png);
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+}
+
+.topImg-main {
+    background-color: rgba(255, 255, 255, 0.55);
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.top-text-main {
+    font-size: 4em;
+}
+
+.top-text-secondary {
+    font-size: 1.2em;
+}
+
+.pricing-card {
+    transition: transform 1ms;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pricing-card:hover {
+    transition: transform .5s;
+    transform: scale(1.03) translateY(-10px);
+    box-shadow:
+    0 0 21px greenyellow,
+}
+
+@media (min-width: 768px) {
+
+    .pricing-card ul {
+        height: 400px;
+    }
+    
+}
+
+@media (min-width: 797px) {
+
+    .starter-pricing-price {
+        font-size: 1.5em !important;
+    }
+    
+    .premium-pricing-price {
+        font-size: 1.5em !important;
+    }
+
+    .executive-pricing-price {
+        font-size: 1.5em !important;
+    }
+    
+}
+
+@media (min-width: 992px) {
+
+    .pricing-card ul {
+        height: 280px;
+    }
+
+    .starter-pricing-price {
+        font-size: 2em !important;
+    }
+    
+    .premium-pricing-price {
+        font-size: 2em !important;
+    }
+
+    .executive-pricing-price {
+        font-size: 2em !important;
+    }
+
+    .services-card img {
+        height: 65vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1202px) {
+
+    .pricing-card ul {
+        height: 250px;
+    }
+    
+    .services-card img {
+        height: 55vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.pc1 {
+    transition-delay: 100ms !important;
+}
+
+.pc3 {
+    transition-delay: 200ms !important;
+}
+
+
+.starter-pricing-price {
+    font-size: 2em;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #00FF00,
+      0 0 42px #00FF00,
+      0 0 82px #00FF00,
+      0 0 92px #00FF00,
+      0 0 102px #00FF00,
+      0 0 151px #00FF00;
+}
+
+
+.premium-pricing-price {
+    font-size: 2em;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #00b4eb,
+      0 0 42px #00b4eb,
+      0 0 82px #00b4eb,
+      0 0 92px #00b4eb,
+      0 0 102px #00b4eb,
+      0 0 151px #00b4eb;
+}
+
+.executive-pricing-price {
+    font-size: 2em;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px rgb(253, 3, 3),
+      0 0 42px rgb(253, 3, 3),
+      0 0 82px rgb(253, 3, 3),
+      0 0 92px rgb(253, 3, 3),
+      0 0 102px rgb(253, 3, 3),
+      0 0 151px rgb(253, 3, 3);
+}
+
+.Tline {
+    border-right: 10px white solid;
+}
+
+
+.Tline2 {
+    border-top: 10px white solid;
+}
+
+
+th {
+    font-size: 1.1em;
+}
+
+
+.aboutUS img {
+    height: 46vh;
+    width: 100%;
+    object-fit: cover;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086); 
+}
+
+.team-card {
+    font-family: "Poppins";
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+}
+
+.team-card img {
+    height: 55vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+    
+    .services-card img {
+        height: 55vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+#staticBackdrop-sedan .modal-content {
+    background-image: url(../Images/bmw1.png);
+    background-size: cover;
+    background-position: center center;
+
+}
+
+#staticBackdrop-suv .modal-content {
+    background-image: url(../Images/escalade.png);
+    background-size: cover;
+    background-position: center center;
+
+}
+
+#staticBackdrop-van .modal-content {
+    background-image: url(../Images/benz\ van.png);
+    background-size: cover;
+    background-position: center center;
+
+}
+.services-card {
+    font-family: "Poppins";
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+}
+
+.icon-animate {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.icon-animate1 {
+    background-color: #000089;
+    border-radius: 10px;
+}
+.icon-animate2 {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+.icon-animate3 {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.testi img {
+    height: 150px;
+    border: 2px white solid;
+    border-radius: 2px;
+    width: auto;
+}
+
+.c-item-main1 {
+    background-image: url(../Images/pexels-andrea-piacquadio-845434-min\ compressed.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 65vh;
+}
+.c-item-main2 {
+    background-image: url(../Images/testi2.png);
+    background-size: cover;
+    background-position: right center;
+    height: 65vh;
+}
+.c-item-main3 {
+    background-image: url(../Images/testi3.png);
+    background-size: cover;
+    background-position: center center;
+    height: 65vh;
+}
+
+.c-item {
+    height: 100%;
+    text-align: center;
+}
+
+.c-item-text {
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(17,16,16,0.8963234952183998) 13%, rgba(6,6,6,0.7394607501203607) 33%, rgba(51,51,51,0.6414215344340861) 67%, rgba(66,66,66,0) 100%);
+}
+
+@media (min-width: 360px) {
+
+    .testi-name {
+        font-size: 0.8em;
+    }
+    
+    .acc-item {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+}
+
+@media (min-width: 625px) {
+    .testi-cmnt {
+        font-size: 1.3em;
+    }
+
+    .testi-name {
+        font-size: 0.9em;
+    }
+    .top-text-main {
+        font-size: 6em;
+    }
+    
+    .top-text-secondary {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 838px) {
+    .testi-cmnt {
+        font-size: 1.5em;
+    }
+
+    .testi-name {
+        font-size: 0.9em;
+    }
+    
+}
+
+
+.scroll-animateB {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.7s;
+}
+
+
+.scroll-animateA {
+    transform: translateY(0);
+    opacity: 1;
+}    
+
+.acc-item {
+    border-bottom: 0 !important;
+    padding-bottom: 10px;
+}
+
+.acc-btn {
+    background-color: rgb(0, 0, 0) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    transition: all 1.5s !important;
+    border-bottom: 1px white solid !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7em !important;
+}
+
+.acc-btn:focus {
+  box-shadow: none !important;
+}
+
+.acc-btn:not(.collapsed) {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    transition:all 0s !important;
+}
+
+.acc-body {
+    background-color: black !important;
+    color: white !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    font-size: 1.1em !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.acc-btn .row {
+    width: 90%;
+}
+
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.headerFont {
+    font-family: 'Rubik', 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
+.headerFont2 {
+    font-family:'Poppins', sans-serif;
+}
+
+.bi-facebook:hover {
+    fill: #1877F2;
+}
+
+.bi-instagram:hover {
+    fill: url(#instaG)
+}
+.bi-twitter-x:hover {
+    fill: white;
+}
+.bi-linkedin:hover {
+    fill: #0A66C2;
+}
